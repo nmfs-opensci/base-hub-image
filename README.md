@@ -11,6 +11,31 @@ The py-rocket base image is designed to have the basic features and applications
 * R + RStudio with bspm handling R package installation (and any apt-get dependencies) and with the CRAN repository pinned for future `install.r` used when this base image is used as `FROM` in another docker image.
 * Desktop VNC for running applications
 
+## Using this as a base image
+
+* R packages: Include `install.R`
+* Python packages: `environment.yml`
+* Desktop applications: `*.desktop` files + entry in `mime` directory if application should be associated with specific file types.
+* root installs: `appendix` file.
+
+Your Dockerfile in your repo will look like
+```
+FROM ghcr.io/nmfs-opensci/container-images/py-rocket-base:latest
+
+# install R packages
+COPY install.R install.R
+RUN Rscript install.R && rm install.R
+
+# install the Python libraries
+COPY environment.yml environment.yml
+RUN conda env update -n notebook -f environment.yml \
+    && conda clean --all \
+    && rm environment.yml
+
+# Set user dir
+WORKDIR /home/jovyan
+```
+
 ## Updating packages in this repository
 
 You can add or update packages on the NMFS Openscapes hub by making pull requests to this
