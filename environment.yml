@@ -65,7 +65,7 @@ dependencies:
   # needed for Linux desktop to work
   - websockify>=0.10
   # Includes new subcommands (`switch` & `restore`) and vulnerability fixes
-   - git>=2.39
+  - git>=2.39
 
   # Not all packages will be available from conda-forge, we install from pip when we need to.
   - pip~=23.3.2
