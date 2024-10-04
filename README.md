@@ -16,15 +16,21 @@ The py-rocket base image is designed to have the basic features and applications
 * R packages: Include `install.R`
 * Python packages: `environment.yml`
 * Desktop applications: `*.desktop` files + entry in `mime` directory if application should be associated with specific file types.
-* root installs: `appendix` file.
+* root installs: `app.sh` file.
 
 Your Dockerfile in your repo will look like
 ```
 FROM ghcr.io/nmfs-opensci/container-images/py-rocket-base:latest
 
+# If needed to do a root install
+USER root
+COPY app.sh app.sh
+RUN cp app.sh /app.sh && chmod xxxxx && ./app.sh && rm app.sh
+USER ${NB_USER}
+
 # install R packages
 COPY install.R install.R
-RUN Rscript install.R && rm install.R
+RUN cp install.R install.R && Rscript install.R && rm install.R
 
 # install the Python libraries
 COPY environment.yml environment.yml
