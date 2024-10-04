@@ -4,9 +4,10 @@
 [![Build and push container image](https://github.com/nmfs-opensci/base-hub-image/actions/workflows/build.yaml/badge.svg)](https://github.com/nmfs-opensci/hub-image/actions/workflows/build.yaml)
 
 The py-rocket image is the base image used for [nmfs-openscapes.2i2c.cloud](https://nmfs-openscapes.2i2c.cloud/hub/login?next=%2Fhub%2F) images that have R and Python. The repo is based off the [CryoCloud hub-image](https://github.com/CryoInTheCloud/hub-image).  The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
-Ubuntu Bionic Beaver (18.04) as the base image. 
+Ubuntu Bionic Beaver (18.04) as the base image. repo2docker saves the repo files to `${REPO_DIR}` in the image (default `/srv/repo`) and the `${REPO_DIR}/start` commands are issues after the image starts. In py-rocket-base, this is mainly used to set up the Desktop applications.
 
-The py-rocket base image is designed to have the basic features and applications for R and Python which have more complex dependencies. 
+The py-rocket base image is designed to have the basic features and applications for R and Python which have more complex dependencies and to make sure that the correct environment variables are set. 
+
 * Python + JupyterLab with conda handling package installation
 * R + RStudio with bspm handling R package installation (and any apt-get dependencies) and with the CRAN repository pinned for future `install.r` used when this base image is used as `FROM` in another docker image.
 * Desktop VNC for running applications
