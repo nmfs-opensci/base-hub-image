@@ -11,32 +11,5 @@ RUN yes | unminimize
 ENV MANPATH="${NB_PYTHON_PREFIX}/share/man:${MANPATH}"
 RUN mandb
 
-# Install R, RStudio on any Ubuntu LTS
-RUN curl -s https://raw.githubusercontent.com/boettiger-lab/repo2docker-r/refs/heads/main/install_r.sh | bash
-RUN curl -s https://raw.githubusercontent.com/boettiger-lab/repo2docker-r/refs/heads/main/install_rstudio.sh | bash
-# Get the rocker_scripts which will be used to install R things
-RUN wget --recursive https://raw.githubusercontent.com/rocker-org/rocker-versioned2/tree/master/scripts
-RUN mv /scripts /rocker_scripts
-
-# Add both our notebook env as well as default conda installation to $PATH
-# Thus, when we start a `python` process (for kernels, or notebooks, etc)
-# it loads the python in the notebook conda environment, as that comes
-# first here.
-ENV PATH=${NB_PYTHON_PREFIX}/bin:${CONDA_DIR}/bin:${PATH}
-
-# Ask dask to read config from ${CONDA_DIR}/etc rather than
-# the default of /etc, since the non-root jovyan user can write
-# to ${CONDA_DIR}/etc but not to /etc
-ENV DASK_ROOT_CONFIG=${CONDA_DIR}/etc
-
-## Ensure that RStudio uses the conda notebook env for Python and modules
-RUN echo "PATH=${PATH}" >>"${RHOME}/etc/Renviron.site"
-
-## Ensure that user library exists
-RUN echo "dir.create(Sys.getenv('R_LIBS_USER'), recursive = TRUE, showWarnings = FALSE)" >> "${RHOME}/etc/Rprofile.site"
-
-# bin to PATH earlier ($NB_PYTHON_PREFIX/bin)
-RUN echo ". ${CONDA_DIR}/etc/profile.d/conda.sh ; conda activate ${CONDA_ENV}" > /etc/profile.d/init_conda.sh
-
 # Revert to default user
 USER ${NB_USER}
