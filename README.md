@@ -1,13 +1,15 @@
-# NMFS JupyterHub base image
+# py-rocket image
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/nmfs-opensci/base-hub-image/HEAD)
 [![Build and push container image](https://github.com/nmfs-opensci/base-hub-image/actions/workflows/build.yaml/badge.svg)](https://github.com/nmfs-opensci/hub-image/actions/workflows/build.yaml)
 
-The JupyterHub docker image used for [nmfs-openscapes.2i2c.cloud](https://nmfs-openscapes.2i2c.cloud/hub/login?next=%2Fhub%2F)
-hosted on https://gh.io/repository/nmfs-opensci/base-hub-image. The repo is based off the [CryoCloud hub-image](https://github.com/CryoInTheCloud/hub-image).
-
-The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
+The py-rocket image is the base image used for [nmfs-openscapes.2i2c.cloud](https://nmfs-openscapes.2i2c.cloud/hub/login?next=%2Fhub%2F) images that have R and Python. The repo is based off the [CryoCloud hub-image](https://github.com/CryoInTheCloud/hub-image).  The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
 Ubuntu Bionic Beaver (18.04) as the base image. 
+
+The py-rocket base image is designed to have the basic features and applications for R and Python which have more complex dependencies. 
+* Python + JupyterLab with conda handling package installation
+* R + RStudio with bspm handling R package installation (and any apt-get dependencies) and with the CRAN repository pinned for future `install.r` used when this base image is used as `FROM` in another docker image.
+* Desktop VNC for running applications
 
 ## Updating packages in this repository
 
