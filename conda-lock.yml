@@ -1756,7 +1756,7 @@ package:
   category: main
   optional: false
 - name: jupyter-ai
-  version: 2.24.0
+  version: 2.24.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -1765,20 +1765,20 @@ package:
     deepmerge: '>=2.0,<3'
     distributed: ''
     importlib-metadata: '>=5.2.0'
-    jupyter-ai-magics: 2.24.0
+    jupyter-ai-magics: 2.24.1
     jupyter_server: '>=1.6,<3'
     jupyterlab: '>=4.0,<5'
     python: '>=3.8'
     traitlets: '>=5.0,<6'
     typing-extensions: '>=4.5.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-2.24.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-2.24.1-pyhd8ed1ab_0.conda
   hash:
-    md5: 7d6952e1e556ce16c4d524a41f28dd63
-    sha256: 4b8b450efad34e79d170d3bfbde558acdf45c6a8cf8b23b8b8123b9b36ee7910
+    md5: e8fd283a8b83f9485b0bdcfb5c21573e
+    sha256: 23d1d157e49a60b93f3ee642ae2932349e17eac6ff2116bc7a34980cf82c1ad0
   category: main
   optional: false
 - name: jupyter-ai-magics
-  version: 2.24.0
+  version: 2.24.1
   manager: conda
   platform: linux-64
   dependencies:
@@ -1790,10 +1790,10 @@ package:
     langchain-community: '>=0.1.0,<0.3.0'
     python: '>=3.8'
     typing-extensions: '>=4.5.0'
-  url: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-magics-2.24.0-pyhd8ed1ab_0.conda
+  url: https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-magics-2.24.1-pyhd8ed1ab_0.conda
   hash:
-    md5: 0342d17aaa7cf4cbb3e921abdcf63ab8
-    sha256: 88a38881cb457a9cad46458cde7628fb4f4eaf265cdc47eadf730e1659d712a5
+    md5: c33c4dee8e78d655fcc1c5bf5b791bc6
+    sha256: 086eb4fcb8d028370bf7033c68a02aeab034a2ae849279bb7c62d8f006262ca0
   category: main
   optional: false
 - name: jupyter-book

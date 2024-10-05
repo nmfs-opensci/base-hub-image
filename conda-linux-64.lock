@@ -335,7 +335,7 @@ https://conda.anaconda.org/conda-forge/noarch/jupyterlab_server-2.27.3-pyhd8ed1a
 https://conda.anaconda.org/conda-forge/noarch/langchain-community-0.2.16-pyhd8ed1ab_0.conda#59a8115a18252ac177ddb4bda1fb7a53
 https://conda.anaconda.org/conda-forge/noarch/nbconvert-7.16.4-hd8ed1ab_1.conda#ab83e3b9ca2b111d8f332e9dc8b2170f
 https://conda.anaconda.org/conda-forge/noarch/notebook-shim-0.2.4-pyhd8ed1ab_0.conda#3d85618e2c97ab896b5b5e298d32b5b3
-https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-magics-2.24.0-pyhd8ed1ab_0.conda#0342d17aaa7cf4cbb3e921abdcf63ab8
+https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-magics-2.24.1-pyhd8ed1ab_0.conda#c33c4dee8e78d655fcc1c5bf5b791bc6
 https://conda.anaconda.org/conda-forge/noarch/jupyter-rsession-proxy-2.2.1-pyhd8ed1ab_0.conda#0e677523a7ff94dac839437c07606dd0
 https://conda.anaconda.org/conda-forge/noarch/jupyter-sshd-proxy-0.2.0-pyhd8ed1ab_0.conda#71966a0ff17259f7f939a8afe193838f
 https://conda.anaconda.org/conda-forge/noarch/jupyter-syncthing-proxy-1.0.3-pyhd8ed1ab_0.conda#85c9949446d54c1b80c83e0357703174
@@ -343,7 +343,7 @@ https://conda.anaconda.org/conda-forge/noarch/jupyter-vscode-proxy-0.6-pyhd8ed1a
 https://conda.anaconda.org/conda-forge/noarch/jupyterlab-4.0.13-pyhd8ed1ab_1.conda#ecd185ca21cde21c72aef6daf2f77226
 https://conda.anaconda.org/conda-forge/noarch/nbdime-4.0.2-pyhd8ed1ab_0.conda#c85813ae6abbeeddecf9ecf544f052bc
 https://conda.anaconda.org/conda-forge/noarch/voila-0.5.7-pyhd8ed1ab_1.conda#05797198a4fd96d2301641a77c2f2775
-https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-2.24.0-pyhd8ed1ab_0.conda#7d6952e1e556ce16c4d524a41f28dd63
+https://conda.anaconda.org/conda-forge/noarch/jupyter-ai-2.24.1-pyhd8ed1ab_0.conda#e8fd283a8b83f9485b0bdcfb5c21573e
 https://conda.anaconda.org/conda-forge/noarch/jupyterhub-singleuser-4.0.2-pyh31011fe_0.conda#9eb773051ad8ecc804ed3bdec84ecce5
 https://conda.anaconda.org/conda-forge/noarch/jupyterlab-git-0.50.1-pyhd8ed1ab_1.conda#2b60b39e08ca93efbb55bcbdf4e6a950
 https://conda.anaconda.org/conda-forge/noarch/notebook-7.0.8-pyhd8ed1ab_0.conda#2f06f20aa561d84b3cfd3cb614041e65
